@@ -112,6 +112,8 @@ Layout.propTypes = {
 export default Layout
 
 const GlobalStyle = createGlobalStyle`
+@import 'node_modules/@fortawesome/fontawesome-svg-core/styles'
+
   * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
