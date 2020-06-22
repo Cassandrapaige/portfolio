@@ -3,14 +3,17 @@ import React, {useState, useEffect} from 'react'
 import {FormGroup} from './range-sliders.styles'
 
 const RangeSliders = () => {
-    const style = typeof window !== 'undefined' && window.getComputedStyle(document.body);
-
     const [saturation, setSaturation] = useState(null)
     const [lightness, setLightness] = useState(null)
 
-    useEffect(() => {
+    const setColorProperties = () => {
+        const style = typeof window !== 'undefined' && window.getComputedStyle(document.body);
         setSaturation(style.getPropertyValue('--saturation'));
         setLightness(style.getPropertyValue('--lightness'));
+    }
+
+    useEffect(() => {
+        setColorProperties()
     }, [saturation, lightness])
 
     const handleChange = event => {

@@ -23,7 +23,7 @@ const ContactButton = styled(Link)`
     position: fixed;
     right: 30px;
     bottom: 30px;
-    color: ${props => props.theme.text};
+    color: ${({theme}) => theme.text};
     font-size: 25px;
     text-decoration: none;
 `
@@ -32,7 +32,7 @@ const Footer = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${props => props.theme.text};
+  color: ${({theme}) => theme.text};
 
   @media(max-width: 700px) {
     flex-direction: column;
@@ -83,7 +83,7 @@ const Layout = ({ children }) => {
         siteTitle={data.site.siteMetadata.title} />
 
         <Container>
-        <main>{children}</main>
+        <main theme = {theme}>{children}</main>
         {
           typeof window !== 'undefined' && window.location.pathname !== '/contact' &&
           <ContactButton to = '/contact'><FontAwesomeIcon icon={faEnvelope} /></ContactButton>

@@ -24,7 +24,7 @@ padding: 20px 50px;
 box-shadow: var(--shadow);
 position: sticky;
 top: 0;
-background: ${props => props.theme.secondary};
+background: ${({theme}) => theme.secondary};
 z-index: 1000;
 `
 
@@ -39,7 +39,7 @@ export const HamburgerIconTop = styled.span`
 position: absolute;
 width: 70%;
 height: 3px;
-background: ${props => props.theme.text};
+background: ${({theme}) => theme.text};
 left: 50%;
 transform: translateX(-50%);
 top: 35%;
