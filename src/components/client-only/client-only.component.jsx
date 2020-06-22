@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react'
 const ClientOnly = ({children}) => {
     const [isMounted, setIsMounted] = useState(false)
 
-    useEffct(() => {
+    useEffect(() => {
         setIsMounted(true)
     }, [])
    
