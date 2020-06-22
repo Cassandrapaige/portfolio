@@ -24,20 +24,20 @@ color: #f6eb72;
 -webkit-text-stroke: 1px #121117;
 `
 
-const Header = ({handleClick, isDarkMode}) => (
+const Header = ({handleClick, isDarkMode, ...props}) => (
   <header>
     <NavbarContainer>
-        <LogoContainer to = '/'>
+        <LogoContainer to = '/' {...props}>
             <Name>Cassie Rossall</Name>
             <Title>Web Developer</Title>
         </LogoContainer>
         <IconContainer>
           <HamburgerIconContainer>
-              <HamburgerIconTop/>
-              <HamburgerIconBottom/>
+              <HamburgerIconTop {...props}/>
+              <HamburgerIconBottom {...props}/>
           </HamburgerIconContainer>
           <ToggleIcon isDarkMode = {isDarkMode}>
-          <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} onClick = {handleClick}/>
+          <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} onClick = {handleClick} style ={{fontSize: '30px'}}/>
           </ToggleIcon>
         </IconContainer>
     </NavbarContainer>

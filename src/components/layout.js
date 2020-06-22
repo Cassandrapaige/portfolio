@@ -6,8 +6,6 @@ import styled, {ThemeProvider, createGlobalStyle} from 'styled-components'
 import soundfile from '../assets/toggle_sound.wav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import {config } from '@fortawesome/fontawesome-svg-core' 
-config.autoAddCss = false
 
 import Header from "../components/header/header.component"
 import SocialLinks from '../components/social-links/social-links.component'
@@ -112,7 +110,6 @@ Layout.propTypes = {
 export default Layout
 
 const GlobalStyle = createGlobalStyle`
-@import 'node_modules/@fortawesome/fontawesome-svg-core/styles'
 
   * {
     font-family: 'Poppins', sans-serif;
