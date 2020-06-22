@@ -6,6 +6,7 @@ import styled, {ThemeProvider, createGlobalStyle} from 'styled-components'
 import soundfile from '../assets/toggle_sound.wav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 import Header from "../components/header/header.component"
 import SocialLinks from '../components/social-links/social-links.component'
@@ -47,8 +48,8 @@ padding: 0 1.0875rem 1.45rem;
 
 const Layout = ({ children }) => {
   const localTheme = typeof window !== 'undefined' && window.localStorage.getItem('theme'); 
-  const [theme, setTheme] = useState(COLORS[localTheme] || COLORS['dark']);
-  const [isDarkMode, setIsDarkMode] = useState(localTheme === 'dark');
+  const [theme, setTheme] = useState(localTheme ? COLORS[localTheme] : COLORS['dark']);
+  const [isDarkMode, setIsDarkMode] = useState(localTheme === 'dark' || theme === COLORS['dark']);
   const audio = typeof Audio !== 'undefined' && new Audio(soundfile);
  
   const data = useStaticQuery(graphql`
