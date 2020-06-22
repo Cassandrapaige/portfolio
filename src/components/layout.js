@@ -7,6 +7,7 @@ import soundfile from '../assets/toggle_sound.wav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import ClientOnly from '../components/client-only/client-only.component'
 
 import Header from "../components/header/header.component"
 import SocialLinks from '../components/social-links/social-links.component'
@@ -80,6 +81,7 @@ const Layout = ({ children }) => {
   }, [])
 
   return (
+  <ClientOnly>
     <ThemeProvider theme = {theme}>
       <GlobalStyle theme = {theme}/>
       <Header
@@ -102,6 +104,7 @@ const Layout = ({ children }) => {
         </Footer>
       </Container>
     </ThemeProvider>
+    </ClientOnly>
     )
   }
 
