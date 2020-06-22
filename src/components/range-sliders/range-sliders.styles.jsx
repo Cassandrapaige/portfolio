@@ -27,7 +27,7 @@ import { COLORS } from '../../constants'
     height: 15px;
     border: none;
     border-radius: 3px;
-    background: ${props => props.theme.contrast};
+    background: ${({theme}) => theme.contrast};
   }
   
   input[type=range]::-webkit-slider-thumb {
@@ -45,7 +45,7 @@ import { COLORS } from '../../constants'
     height: 15px;
     border: none;
     border-radius: 3px;
-    background: ${props => props.theme.contrast};
+    background: ${({theme}) => theme.contrast};
   }
   
   input[type=range]::-moz-range-thumb {

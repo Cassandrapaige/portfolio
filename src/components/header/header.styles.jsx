@@ -2,19 +2,19 @@ import styled from 'styled-components'
 import {Link} from 'gatsby'
 
 export const LogoContainer = styled(Link)`
-    line-height: 30px;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: ${props => props.theme.text};
+line-height: 30px;
+display: flex;
+flex-direction: column;
+text-decoration: none;
+color: ${({theme}) => theme.text};
 `
 
 export const Name = styled.h2`
-    font-weight: 800;
+font-weight: 800;
 `
 
 export const Title = styled.span`
-    font-weight: 200;
+font-weight: 200;
 `
 
 export const NavbarContainer = styled.div`

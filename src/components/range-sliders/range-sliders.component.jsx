@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 import {FormGroup} from './range-sliders.styles'
 
-const RangeSliders = () => {
+const RangeSliders = ({...props}) => {
     const [saturation, setSaturation] = useState(null)
     const [lightness, setLightness] = useState(null)
 
@@ -33,6 +33,7 @@ const RangeSliders = () => {
                 max='100' 
                 onChange = {handleChange}
                 value = {saturation !== null ? saturation.replace('%', '').trim() : ''}
+                {...props}
                 />
         </FormGroup>
 
@@ -44,6 +45,7 @@ const RangeSliders = () => {
                 max='100' 
                 onChange = {handleChange}
                 value = {lightness !== null ? lightness.replace('%', '').trim() : ''}
+                {...props}
                 />
         </FormGroup>
     </div>

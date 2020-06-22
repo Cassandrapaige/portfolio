@@ -78,12 +78,13 @@ const Layout = ({ children }) => {
     <ThemeProvider theme = {theme}>
       <GlobalStyle />
       <Header
+        theme = {theme}
         isDarkMode = {isDarkMode}
-        handleClick = {() => toggleTheme()} 
+        handleClick = {toggleTheme} 
         siteTitle={data.site.siteMetadata.title} />
 
         <Container>
-        <main theme = {theme}>{children}</main>
+        <main>{children}</main>
         {
           typeof window !== 'undefined' && window.location.pathname !== '/contact' &&
           <ContactButton to = '/contact'><FontAwesomeIcon icon={faEnvelope} /></ContactButton>
@@ -101,6 +102,8 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  theme: PropTypes.bool.isRequired,
+  isDarkMode: PropTypes.bool.isRequired
 }
 
 export default Layout
@@ -127,8 +130,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    color: ${props => props.theme.text};
-    background: ${props => props.theme.background};
+    color: ${({theme}) => theme.text};
+    background: ${({theme}) => theme.background};
   }
 
   main {
@@ -136,7 +139,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: ${props => props.theme.text};
+    color: ${({theme}) => theme.text};
     text-decoration: none;
   }
 `
