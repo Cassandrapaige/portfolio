@@ -3,18 +3,14 @@ import React, {useState, useEffect} from 'react'
 import {FormGroup} from './range-sliders.styles'
 
 const RangeSliders = () => {
-    const style = getComputedStyle(document.body);
+    const style = typeof window !== 'undefined' && window.getComputedStyle(document.body);
 
-    const [saturation, setSaturation] = useState(style.getPropertyValue('--saturation'))
-    const [lightness, setLightness] = useState(style.getPropertyValue('--lightness'))
-
-    const setColorProperties = () => {
-        setSaturation(style.getPropertyValue('--saturation'));
-        setLightness(style.getPropertyValue('--lightness'));
-    }
+    const [saturation, setSaturation] = useState(null)
+    const [lightness, setLightness] = useState(null)
 
     useEffect(() => {
-        setColorProperties()
+        setSaturation(style.getPropertyValue('--saturation'));
+        setLightness(style.getPropertyValue('--lightness'));
     }, [saturation, lightness])
 
     const handleChange = event => {
@@ -33,7 +29,7 @@ const RangeSliders = () => {
                 min = '1' 
                 max='100' 
                 onChange = {handleChange}
-                value = {saturation.replace('%', '').trim()}
+                value = {saturation !== null ? saturation.replace('%', '').trim() : ''}
                 />
         </FormGroup>
 
@@ -44,7 +40,7 @@ const RangeSliders = () => {
                 min = '1' 
                 max='100' 
                 onChange = {handleChange}
-                value = {lightness.replace('%', '').trim()}
+                value = {lightness !== null ? lightness.replace('%', '').trim() : ''}
                 />
         </FormGroup>
     </div>

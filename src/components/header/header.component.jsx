@@ -1,5 +1,7 @@
 import React from "react"
 import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
 import {LogoContainer,
         Name,
@@ -35,9 +37,7 @@ const Header = ({handleClick, isDarkMode}) => (
               <HamburgerIconBottom/>
           </HamburgerIconContainer>
           <ToggleIcon isDarkMode = {isDarkMode}>
-              <i className={`${isDarkMode ? 'fas fa-moon' : 'fas fa-sun'}`} 
-                onClick = {handleClick}>
-              </i>
+          <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} onClick = {handleClick}/>
           </ToggleIcon>
         </IconContainer>
     </NavbarContainer>

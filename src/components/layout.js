@@ -4,6 +4,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled, {ThemeProvider, createGlobalStyle} from 'styled-components'
 import soundfile from '../assets/toggle_sound.wav'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 import Header from "../components/header/header.component"
 import SocialLinks from '../components/social-links/social-links.component'
@@ -44,10 +46,10 @@ padding: 0 1.0875rem 1.45rem;
 `
 
 const Layout = ({ children }) => {
-  const localTheme = window.localStorage.getItem('theme'); 
+  const localTheme = typeof window !== 'undefined' && window.localStorage.getItem('theme'); 
   const [theme, setTheme] = useState(COLORS[localTheme] || COLORS['dark']);
   const [isDarkMode, setIsDarkMode] = useState(localTheme === 'dark');
-  const audio = new Audio(soundfile);
+  const audio = typeof Audio !== 'undefined' && new Audio(soundfile);
  
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -61,18 +63,17 @@ const Layout = ({ children }) => {
 
   const toggleTheme = () => {
     if(localTheme === 'dark') {
-      window.localStorage.setItem('theme', 'light');
+      typeof window !== 'undefined' && window.localStorage.setItem('theme', 'light');
       setTheme(COLORS['light'])
       setIsDarkMode(false);
     } else {
-      window.localStorage.setItem('theme', 'dark');
+      typeof window !== 'undefined' && window.localStorage.setItem('theme', 'dark');
       setTheme(COLORS['dark'])
       setIsDarkMode(true)
     }
     audio.play();
   }
 
-  console.log(localTheme)
   return (
     <ThemeProvider theme = {theme}>
       <GlobalStyle />
@@ -84,8 +85,8 @@ const Layout = ({ children }) => {
         <Container>
         <main>{children}</main>
         {
-          window.location.pathname !== '/contact' &&
-          <ContactButton to = '/contact'><i class="far fa-envelope"></i></ContactButton>
+          typeof window !== 'undefined' && window.location.pathname !== '/contact' &&
+          <ContactButton to = '/contact'><FontAwesomeIcon icon={faEnvelope} /></ContactButton>
         }
         <Footer>
           <SocialLinks />
