@@ -8,36 +8,26 @@ import {LogoContainer,
         Title,
         NavbarContainer, 
         HamburgerIconContainer, 
-        HamburgerIconTop, 
+        HamburgerIconTop,
+        IconContainer,
+        ToggleIcon, 
         HamburgerIconBottom} 
         from './header.styles'
 
-const IconContainer = styled.div`
-display: flex;
-align-items: center;
-`
-
-const ToggleIcon = styled.div`
-font-size: 28px;
-padding-left: 20px;
-color: #f6eb72;
--webkit-text-stroke: 1px #121117;
-`
-
-const Header = ({handleClick, isDarkMode, ...props}) => (
+const Header = ({handleClick, isDarkMode}) => (
   <header>
     <NavbarContainer>
-        <LogoContainer to = '/' {...props}>
+        <LogoContainer to = '/'>
             <Name>Cassie Rossall</Name>
             <Title>Web Developer</Title>
         </LogoContainer>
         <IconContainer>
           <HamburgerIconContainer>
-              <HamburgerIconTop {...props}/>
-              <HamburgerIconBottom {...props}/>
+              <HamburgerIconTop/>
+              <HamburgerIconBottom/>
           </HamburgerIconContainer>
           <ToggleIcon isDarkMode = {isDarkMode}>
-          <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} onClick = {handleClick} style ={{fontSize: '30px'}}/>
+            <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} onClick = {handleClick}/>
           </ToggleIcon>
         </IconContainer>
     </NavbarContainer>

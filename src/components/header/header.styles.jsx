@@ -6,15 +6,16 @@ line-height: 30px;
 display: flex;
 flex-direction: column;
 text-decoration: none;
-color: ${({theme}) => theme.text};
 `
 
 export const Name = styled.h2`
 font-weight: 800;
+color: ${({theme}) => theme.text};
 `
 
 export const Title = styled.span`
 font-weight: 200;
+color: ${({theme}) => theme.text};
 `
 
 export const NavbarContainer = styled.div`
@@ -49,3 +50,14 @@ top: unset;
 bottom: 35%;
 `
 
+export const IconContainer = styled.div`
+display: flex;
+align-items: center;
+`
+
+export const ToggleIcon = styled.div`
+padding-left: 20px;
+color: #f6eb72;
+-webkit-text-stroke: 1px #121117;
+font-size: 28px;
+`

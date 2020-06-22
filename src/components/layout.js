@@ -80,8 +80,9 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme = {theme}>
-      <GlobalStyle/>
+      <GlobalStyle theme = {theme}/>
       <Header
+        theme = {theme}
         isDarkMode = {isDarkMode}
         handleClick = {toggleTheme} 
         siteTitle={data.site.siteMetadata.title} />
@@ -92,7 +93,7 @@ const Layout = ({ children }) => {
           typeof window !== 'undefined' && window.location.pathname !== '/contact' &&
           <ContactButton to = '/contact'><FontAwesomeIcon icon={faEnvelope} /></ContactButton>
         }
-        <Footer>
+        <Footer theme = {theme}>
           <SocialLinks />
           <div className="copyright">
               © {new Date().getFullYear()}, Made with love by Cassie Rossall
