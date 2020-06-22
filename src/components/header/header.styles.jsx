@@ -24,7 +24,6 @@ padding: 20px 50px;
 box-shadow: var(--shadow);
 position: sticky;
 top: 0;
-background: ${({theme}) => theme.secondary};
 z-index: 1000;
 `
 

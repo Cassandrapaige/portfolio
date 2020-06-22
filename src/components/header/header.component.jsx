@@ -13,8 +13,8 @@ import {LogoContainer,
         from './header.styles'
 
 const IconContainer = styled.div`
-  display: flex;
-  align-items: center;
+display: flex;
+align-items: center;
 `
 
 const ToggleIcon = styled.div`
@@ -24,15 +24,15 @@ color: #f6eb72;
 -webkit-text-stroke: 1px #121117;
 `
 
-const Header = ({handleClick, isDarkMode, ...props}) => (
+const Header = ({handleClick, isDarkMode}) => (
   <header>
-    <NavbarContainer {...props}>
+    <NavbarContainer>
         <LogoContainer to = '/'>
             <Name>Cassie Rossall</Name>
             <Title>Web Developer</Title>
         </LogoContainer>
         <IconContainer>
-          <HamburgerIconContainer {...props}>
+          <HamburgerIconContainer>
               <HamburgerIconTop/>
               <HamburgerIconBottom/>
           </HamburgerIconContainer>

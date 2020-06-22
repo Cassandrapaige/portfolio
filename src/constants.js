@@ -21,14 +21,12 @@ export const COLORS = {
     dark: {
         text: '#d9d7e0',
         background: '#131217',
-        secondary: '#131217',
         contrast: '#1e1e22',
         complimentary: '#121117'
     },
     light: {
         text: '#131217',
         background: '#fff',
-        secondary: '#fff',
         contrast: `hsl(${HUES[2]}, var(--saturation), var(--lightness))`,
         complimentary: '#fff'
     }

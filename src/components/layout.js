@@ -14,25 +14,25 @@ import {COLORS} from '../constants'
 import "./layout.css"
 
 const ContactButton = styled(Link)`
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid ${COLORS.randomColor};
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    color: ${({theme}) => theme.text};
-    font-size: 25px;
-    text-decoration: none;
+width: 50px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 2px solid ${COLORS.randomColor};
+position: fixed;
+right: 30px;
+bottom: 30px;
+color: ${({theme}) => theme.text};
+font-size: 25px;
+text-decoration: none;
 `
 
 const Footer = styled.footer`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: ${({theme}) => theme.text};
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: ${({theme}) => theme.text};
 
   @media(max-width: 700px) {
     flex-direction: column;
@@ -74,11 +74,14 @@ const Layout = ({ children }) => {
     audio.play();
   }
 
+  useEffect(() => {
+    localTheme && setTheme(COLORS[localTheme])
+  }, [])
+
   return (
     <ThemeProvider theme = {theme}>
-      <GlobalStyle />
+      <GlobalStyle/>
       <Header
-        theme = {theme}
         isDarkMode = {isDarkMode}
         handleClick = {toggleTheme} 
         siteTitle={data.site.siteMetadata.title} />
@@ -101,9 +104,7 @@ const Layout = ({ children }) => {
   }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  theme: PropTypes.bool.isRequired,
-  isDarkMode: PropTypes.bool.isRequired
+  children: PropTypes.node.isRequired
 }
 
 export default Layout
