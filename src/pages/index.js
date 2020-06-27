@@ -20,12 +20,20 @@ export const HeaderContainer = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 30px;
+
+    @media(max-width: 900px) {
+        padding: 0px;
+      }
 `
 
 export const Title = styled.h2`
     text-align: center;
     padding: 5px 10px 25px 10px;
     font-size: 1.9em;
+
+    @media(max-width: 700px) {
+        font-size: 1.4em;
+    }
 `
 
 export default () => {

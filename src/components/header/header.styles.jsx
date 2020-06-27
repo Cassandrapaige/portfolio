@@ -26,28 +26,10 @@ box-shadow: var(--shadow);
 position: sticky;
 top: 0;
 z-index: 1000;
-`
 
-export const HamburgerIconContainer = styled.div`
-width: 50px;
-height: 50px;
-border-radius: 50%;
-position: relative;
-`
-
-export const HamburgerIconTop = styled.span`
-position: absolute;
-width: 70%;
-height: 3px;
-background: ${({theme}) => theme.text};
-left: 50%;
-transform: translateX(-50%);
-top: 35%;
-`
-
-export const HamburgerIconBottom = styled(HamburgerIconTop)`
-top: unset;
-bottom: 35%;
+@media(max-width: 700px) {
+    padding: 20px;
+}
 `
 
 export const IconContainer = styled.div`

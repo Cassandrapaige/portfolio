@@ -24,7 +24,7 @@ const RangeSliders = ({...props}) => {
     }
 
     return (
-    <div className="controls">
+    <div className="controls" style= {{paddingTop: '30px'}}>
         <FormGroup>
             <input 
                 type="range" 

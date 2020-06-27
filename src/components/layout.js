@@ -26,8 +26,14 @@ position: fixed;
 right: 30px;
 bottom: 30px;
 color: ${({theme}) => theme.text};
+background: ${({theme}) => theme.background};
 font-size: 25px;
 text-decoration: none;
+
+@media(max-width: 700px) {
+  right: 5px;
+  bottom: 5px;
+}
 `
 
 const Footer = styled.footer`
@@ -44,7 +50,11 @@ color: ${({theme}) => theme.text};
 const Container = styled.div`
 margin: 0 auto;
 max-width: 1020px;
-padding: 0 1.0875rem 1.45rem;
+padding: 30px 20px;
+
+@media(max-width: 900px) {
+  padding: 10px 20px;
+}
 `
 
 const Layout = ({ children }) => {
@@ -98,7 +108,7 @@ const Layout = ({ children }) => {
         }
         <Footer theme = {theme}>
           <SocialLinks />
-          <div className="copyright">
+          <div className="copyright" style= {{paddingTop: '10px'}}>
               © {new Date().getFullYear()}, Made with love by Cassie Rossall
           </div>
         </Footer>
@@ -143,6 +153,14 @@ const GlobalStyle = createGlobalStyle`
 
   main {
     padding: 50px 0;
+
+    @media(max-width: 900px) {
+      padding: 30px 0px;
+    }
+  }
+
+  img {
+    width: 100%;
   }
 
   a {

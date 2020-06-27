@@ -8,11 +8,7 @@ import {LogoContainer,
         Name,
         Title,
         NavbarContainer, 
-        HamburgerIconContainer, 
-        HamburgerIconTop,
-        IconContainer,
-        ToggleIcon, 
-        HamburgerIconBottom} 
+        ToggleIcon} 
         from './header.styles'
 
 const Header = ({handleClick, isDarkMode}) => (
@@ -22,15 +18,9 @@ const Header = ({handleClick, isDarkMode}) => (
             <Name>Cassie Rossall</Name>
             <Title>Web Developer</Title>
         </LogoContainer>
-        <IconContainer>
-          <HamburgerIconContainer>
-              <HamburgerIconTop/>
-              <HamburgerIconBottom/>
-          </HamburgerIconContainer>
           <ToggleIcon>
-            <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} onClick = {handleClick} width='0'/>
+            <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} onClick = {() => handleClick()} width='0'/>
           </ToggleIcon>
-        </IconContainer>
     </NavbarContainer>
   </header>
 )

@@ -7,6 +7,10 @@ padding: 50px;
 border-radius: 10px;
 box-shadow: var(--shadow);
 background: ${props => props.theme.complimentary};
+
+@media(max-width: 700px) {
+    padding: 20px;
+}
 `
 
 export const FormGroup = styled.div`
@@ -22,6 +26,7 @@ input[type='text'] {
     font-size: 18px;
     background: transparent;
     outline: none;
+    border-radius: 0;
 }
 
 input[type='text']:focus {
@@ -45,19 +50,25 @@ outline: none;
 margin-top: 10px;
 padding: 10px;
 font-size: 18px;
+border-radius: 0;
 `
 
 export const IntroParagraph = styled.p`
 text-align: center;
 font-size: 20px;
 padding: 15px;
+
+@media(max-width: 700px) {
+    padding: 15px 0px;
+    font-size: 16px;
+}
 `
 
 export const SubmitButton = styled.button`
 padding: 15px;
 background: ${COLORS.randomColor()};
 font-size: 18px;
-font-weight: 500;
+font-weight: 300;
 border: none;
 margin-top: 20px;
 width: 100%;
@@ -78,6 +89,11 @@ export const ConfirmationMessage = styled.p`
 font-family: 'Nothing You Could Do', cursive;
 font-size: 23px;
 padding: 10px;
+
+@media(max-width: 700px) {
+    font-size: 16px;
+}
+
 `
 
 export const CustomCheckbox = styled.div`

@@ -35,8 +35,13 @@ display: block;
     }
 }
 
-@media(max-width: 700px) {
+@media(max-width: 750px) {
     font-size: 40px;
     line-height: 45px;
+}
+
+@media(max-width: 500px) {
+    font-size: 30px;
+    line-height: 40px;
 }
 `

@@ -18,4 +18,8 @@ font-size: ${props => props.smallText ? '.9em' : '1.2em'};
 padding: 5px 10px;
 font-weight: 500;
 background: ${props => props.theme.complimentary};
+
+@media(max-width: 700px) {
+    font-size: ${props => props.smallText ? '.8em' : '.9em'};
+}
 `
