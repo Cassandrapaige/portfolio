@@ -27,7 +27,7 @@ display: block;
 @media(max-width: 700px) {
     animation: none;
     opacity: 1;
-    transform: translateY(0px);
+    transform: unset;
     font-size: 55px;
     line-height: 65px;
 }

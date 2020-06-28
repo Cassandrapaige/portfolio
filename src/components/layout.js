@@ -74,7 +74,7 @@ const Layout = ({ children }) => {
   `)
 
   const toggleTheme = () => {
-    if(localTheme === 'dark') {
+    if(localTheme === 'dark' || theme === COLORS['dark']) {
       typeof window !== 'undefined' && window.localStorage.setItem('theme', 'light');
       setTheme(COLORS['light'])
       setIsDarkMode(false);
