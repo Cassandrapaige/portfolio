@@ -4,9 +4,6 @@ import {COLORS} from '../../constants'
 export const Title = styled.h1`
 height: 100%;
 display: inline-block;
-display: -webkit-box;   
-display: -moz-box; 
-display: -ms-flexbox; 
 display: -webkit-flex; 
 display: flex;   
 flex-wrap: wrap;
@@ -34,36 +31,5 @@ display: block;
 @media(max-width: 700px) {
     font-size: 55px;
     line-height: 65px;
-}
-
-@keyframes slide-down {
-    from {
-        opacity: 0;
-        -webkit-transform: translateY(-50px);
-        -ms-transform: translateY(-50px);
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: translateY(0px);
-        -ms-transform: translateY(0px);
-        transform: translateY(0px);
-    }
-}
-
-
-@-webkit-keyframes slide-down {
-    from {
-        opacity: 0;
-        -webkit-transform: translateY(-50px);
-        -ms-transform: translateY(-50px);
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: translateY(0px);
-        -ms-transform: translateY(0px);
-        transform: translateY(0px);
-    }
 }
 `
