@@ -12,7 +12,9 @@ padding: 15px;
 border-radius: 10px;
 box-shadow: var(--shadow);
 background: ${props => props.theme.complimentary};
-border: 1px solid ${COLORS.randomColor()};
+border-style: solid;
+border-color: ${COLORS.randomColor()};
+border-width: 1px;
 `
 
 export const ImageContainer = styled.div`
