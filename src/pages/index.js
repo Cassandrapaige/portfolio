@@ -28,7 +28,7 @@ export const HeaderContainer = styled.div`
 
 export const Title = styled.h2`
     text-align: center;
-    padding: 5px 10px 25px 10px;
+    padding: 15px 10px 25px 10px;
     font-size: 1.9em;
 
     @media(max-width: 700px) {

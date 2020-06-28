@@ -8,6 +8,6 @@ padding: 100px 0px;
 
 @media(max-width: 700px) {
     grid-template-columns: 1fr;
-    padding-bottom: 50px;
+    padding: 50px 0;
 }
 `

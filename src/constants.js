@@ -37,21 +37,21 @@ export const COLORS = {
 export const PROJECT_DATA = [
     {
         id: 0,
-        title: "Nike",
-        description: "A Nike clone built using ReactJS, Redux and Firebase. It uses the Stripe API and NodeJs to receive payments* and includes multiple search features to filter the products.",
-        source: '',
-        demo: '',
-        image: project2,
-        tech: ["Html", "Css", "Javascript/ES6", "ReactJs", "Redux", "Firebase", "Styled Components", "Stripe API"]
-    },
-    {
-        id: 1,
         title: "Movies R Us",
         description: "This site was built using ReactJS and the MovieDB API. It allows you to browse through hundreds of movies or search for your favourites to find ones that are similar.",
         source: " ",
         demo: " ",
         image: project1,
         tech: ["Html", "Css", "Javascript/ES6", "ReactJs", "Scss", "React Spring", "API"]
+    },
+    {
+        id: 1,
+        title: "Nike",
+        description: "A Nike clone built using ReactJS, Redux and Firebase. It uses the Stripe API and NodeJs to receive payments* and includes multiple search features to filter the products.",
+        source: '',
+        demo: '',
+        image: project2,
+        tech: ["Html", "Css", "Javascript/ES6", "ReactJs", "Redux", "Firebase", "Styled Components", "Stripe API"]
     },
     {
         id: 2,

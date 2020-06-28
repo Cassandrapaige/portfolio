@@ -1,6 +1,10 @@
 import React, {useState} from "react"
 import { graphql, Link } from "gatsby"
 import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+
 import { COLORS } from "../constants"
 
 import Layout from "../components/layout"
@@ -57,7 +61,7 @@ const Post = ({node, ...props}) => {
      >
       <BlogTitle isHovered = {isHovered}>{node.frontmatter.title}</BlogTitle>
       <Excerpt>{node.excerpt}</Excerpt>
-      <BlogLink to = {node.fields.slug} isHovered = {isHovered}>Read more <i class="fas fa-arrow-right"></i></BlogLink>
+      <BlogLink to = {node.fields.slug} isHovered = {isHovered}>Read more <FontAwesomeIcon icon={faArrowRight} /></BlogLink>
      </BlogPost>
    </Link>
   )

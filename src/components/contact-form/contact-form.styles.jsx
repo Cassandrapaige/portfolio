@@ -82,6 +82,7 @@ align-items: center;
 
 input[type='checkbox'] {
 appearance: none;
+display: none;
 }
 `
 

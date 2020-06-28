@@ -95,9 +95,8 @@ const Layout = ({ children }) => {
     <ThemeProvider theme = {theme}>
       <GlobalStyle theme = {theme}/>
       <Header
-        theme = {theme}
         isDarkMode = {isDarkMode}
-        handleClick = {toggleTheme} 
+        handleClick = {() => toggleTheme()} 
         siteTitle={data.site.siteMetadata.title} />
 
         <Container>
@@ -106,7 +105,7 @@ const Layout = ({ children }) => {
           typeof window !== 'undefined' && window.location.pathname !== '/contact' &&
           <ContactButton to = '/contact'><FontAwesomeIcon icon={faEnvelope} /></ContactButton>
         }
-        <Footer theme = {theme}>
+        <Footer>
           <SocialLinks />
           <div className="copyright" style= {{paddingTop: '10px'}}>
               © {new Date().getFullYear()}, Made with love by Cassie Rossall

@@ -29,11 +29,9 @@ const ProjectItem = ({item, ...props}) => {
             </TechStackContainer>  
             <LinksContainer>
                 <ProjectLink href = {source} {...props}>
-                    <i className="fab fa-github"></i>
                     Source
                 </ProjectLink>
                 <ProjectLink href = {demo} {...props}>
-                    <i className="fas fa-laptop-code"></i>
                     Live Demo
                 </ProjectLink>
             </LinksContainer>            

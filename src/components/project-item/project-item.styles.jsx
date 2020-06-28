@@ -50,9 +50,4 @@ padding-right: 15px;
 font-size: 1.2em; 
 font-weight: 500;
 color: ${props => props.theme.text};
-
-i {
-    padding-right: 5px; 
-    font-size: .8em;
-}
 `
