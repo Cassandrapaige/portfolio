@@ -99,7 +99,6 @@ const Layout = ({ children }) => {
   }, [])
 
   return (
-  <ClientOnly>
     <ThemeProvider theme = {theme}>
       <GlobalStyle theme = {theme}/>
       <Header
@@ -121,7 +120,6 @@ const Layout = ({ children }) => {
         </Footer>
       </Container>
     </ThemeProvider>
-    </ClientOnly>
     )
   }
 

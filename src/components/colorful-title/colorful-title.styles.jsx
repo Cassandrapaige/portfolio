@@ -18,7 +18,7 @@ padding: 0 5px;
 export const Letter = styled.span`
 color: ${COLORS.randomColor};
 transition: all 1s ease;
-font-size: 60;
+font-size: 60px;
 font-weight: 800;
 line-height: 74px;
 opacity: 0;
@@ -34,7 +34,9 @@ display: block;
 @media(max-width: 700px) {
     animation: none;
     opacity: 1;
-    transform: unset;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
     font-size: 55px;
     line-height: 65px;
 }

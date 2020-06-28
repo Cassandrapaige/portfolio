@@ -43,7 +43,6 @@ display: -ms-flexbox;
 display: -webkit-flex; 
 display: flex;   
 flex-direction: column;
-height: 100%;
 `
 
 export const LinksContainer = styled.div`

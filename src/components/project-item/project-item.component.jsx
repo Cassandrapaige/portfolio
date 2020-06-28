@@ -29,7 +29,7 @@ const ProjectItem = ({item, ...props}) => {
             </TechStackContainer>  
             <LinksContainer>
                 <ProjectLink href = {source} {...props}>
-                    Source
+                    Github
                 </ProjectLink>
                 <ProjectLink href = {demo} {...props}>
                     Live Demo

@@ -89,6 +89,8 @@ display: flex;
 align-items: center;
 
 input[type='checkbox'] {
+-webkit-appearance: none;
+-moz-appearance: none;
 appearance: none;
 display: none;
 }
