@@ -63,7 +63,7 @@ max-width: 1020px;
 padding: 30px 20px;
 
 @media(max-width: 900px) {
-  padding: 10px 20px;
+  padding: 20px;
 }
 `
 

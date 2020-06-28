@@ -27,7 +27,8 @@ export const HeaderContainer = styled.div`
 
     @media(max-width: 900px) {
         padding: 0px;
-      }
+        min-height: 40vh;
+    }
 `
 
 export const Title = styled.h2`
