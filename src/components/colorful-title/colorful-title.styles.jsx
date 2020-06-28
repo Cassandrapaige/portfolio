@@ -32,11 +32,6 @@ animation-delay: calc(.1s * var(--char-index));
 display: block;
 
 @media(max-width: 700px) {
-    animation: none;
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    transform: translateY(0px);
     font-size: 55px;
     line-height: 65px;
 }

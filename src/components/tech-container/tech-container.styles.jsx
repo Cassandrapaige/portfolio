@@ -14,7 +14,7 @@ align-items: center;
 
 export const TechType = styled.span`
 border-style: solid;
-border-color: ${COLORS.randomColor()};
+border-color: ${COLORS.randomColor};
 border-width: ${({smallText}) => smallText ? '1px' : '2px'};
 border-radius: 10px;
 margin: 3px;
