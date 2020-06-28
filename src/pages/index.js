@@ -15,9 +15,6 @@ import RangeSliders from "../components/range-sliders/range-sliders.component"
 import ContactForm from "../components/contact-form/contact-form.component"
 
 export const HeaderContainer = styled.div`
-    display: -webkit-box;   
-    display: -moz-box; 
-    display: -ms-flexbox; 
     display: -webkit-flex; 
     display: flex;   
     justify-content: center;

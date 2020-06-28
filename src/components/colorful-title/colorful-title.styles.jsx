@@ -10,6 +10,7 @@ flex-wrap: wrap;
 white-space: pre;
 justify-content: center;
 padding: 0 5px;
+height: 100%;
 `
 
 export const Letter = styled.span`
