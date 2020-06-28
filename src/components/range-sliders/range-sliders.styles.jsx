@@ -9,7 +9,11 @@ import { COLORS } from '../../constants'
     -webkit-appearance: none;
     position: relative;
     width: 100%;
-    display: flex;
+    display: -webkit-box;   
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: -webkit-flex; 
+    display: flex;   
     margin: 10px 0;
     background: none;
   }

@@ -2,7 +2,11 @@ import styled from 'styled-components'
 import {COLORS} from '../../constants'
 
 export const TechContainer = styled.div`
-display: flex;
+display: -webkit-box;   
+display: -moz-box; 
+display: -ms-flexbox; 
+display: -webkit-flex; 
+display: flex;   
 flex-wrap: wrap;
 justify-content: ${props => props.isCentered ? 'center' : 'unset'};
 align-items: center;

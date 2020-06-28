@@ -21,7 +21,9 @@ const BlogLink = styled(Link)`
   .fa-arrow-right {
     transition: all .2s ease;
     opacity: ${props => props.isHovered ? 1: 0};
-    transform: ${props => props.isHovered ? 'translateX(10px)' : 'translateX(-20px)'}
+    -webkit-transform: ${props => props.isHovered ? 'translateX(10px)' : 'translateX(-20px)'};
+    -ms-transform: ${props => props.isHovered ? 'translateX(10px)' : 'translateX(-20px)'};
+    transform: ${props => props.isHovered ? 'translateX(10px)' : 'translateX(-20px)'};
   }
 `
 

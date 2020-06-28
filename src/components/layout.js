@@ -18,7 +18,11 @@ import "./layout.css"
 const ContactButton = styled(Link)`
 width: 50px;
 height: 50px;
-display: flex;
+display: -webkit-box;   
+display: -moz-box; 
+display: -ms-flexbox; 
+display: -webkit-flex; 
+display: flex;   
 justify-content: center;
 align-items: center;
 border: 2px solid ${COLORS.randomColor};
@@ -37,7 +41,11 @@ text-decoration: none;
 `
 
 const Footer = styled.footer`
-display: flex;
+display: -webkit-box;   
+display: -moz-box; 
+display: -ms-flexbox; 
+display: -webkit-flex; 
+display: flex;   
 justify-content: space-between;
 align-items: center;
 color: ${({theme}) => theme.text};

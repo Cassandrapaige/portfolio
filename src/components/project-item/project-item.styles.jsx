@@ -2,7 +2,11 @@ import styled from 'styled-components'
 import { COLORS } from '../../constants'
 
 export const ProjectContainer = styled.div`
-display: flex;
+display: -webkit-box;   
+display: -moz-box; 
+display: -ms-flexbox; 
+display: -webkit-flex; 
+display: flex;   
 flex-direction: column;
 padding: 15px;
 border-radius: 10px;
@@ -33,7 +37,11 @@ line-height: 26px;
 `
 
 export const ProjectInfo = styled.div`
-display: flex;
+display: -webkit-box;   
+display: -moz-box; 
+display: -ms-flexbox; 
+display: -webkit-flex; 
+display: flex;   
 flex-direction: column;
 height: 100%;
 `

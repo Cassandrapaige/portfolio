@@ -3,7 +3,11 @@ import {Link} from 'gatsby'
 import {COLORS} from '../../constants'
 
 export const SocialIconsContainer = styled.div`
-display: flex;
+display: -webkit-box;   
+display: -moz-box; 
+display: -ms-flexbox; 
+display: -webkit-flex; 
+display: flex;   
 `
 
 export const SocialLink = styled(Link)`

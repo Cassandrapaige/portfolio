@@ -14,7 +14,11 @@ background: ${props => props.theme.complimentary};
 `
 
 export const FormGroup = styled.div`
-display: flex;
+display: -webkit-box;   
+display: -moz-box; 
+display: -ms-flexbox; 
+display: -webkit-flex; 
+display: flex;   
 flex-direction: column;
 margin: 5px 0;
 
@@ -77,7 +81,11 @@ outline: none;
 `
 
 export const CheckboxContainer = styled.div`
-display: flex;
+display: -webkit-box;   
+display: -moz-box; 
+display: -ms-flexbox; 
+display: -webkit-flex; 
+display: flex;   
 align-items: center;
 
 input[type='checkbox'] {
@@ -101,7 +109,11 @@ export const CustomCheckbox = styled.div`
 width: 25px;
 height: 25px;
 position: relative;
-display: flex;
+display: -webkit-box;   
+display: -moz-box; 
+display: -ms-flexbox; 
+display: -webkit-flex; 
+display: flex;   
 justify-content: center;
 align-items: center;
 border: 1px solid ${props => props.theme.text};
@@ -113,6 +125,8 @@ width: 25%;
 height: 70%;
 border-right: 2px solid ${props => props.theme.text};
 border-bottom: 2px solid ${props => props.theme.text};
+-webkit-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
 transform: rotate(45deg);
 }
 `

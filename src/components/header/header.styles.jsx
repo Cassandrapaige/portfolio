@@ -3,7 +3,11 @@ import {Link} from 'gatsby'
 
 export const LogoContainer = styled(Link)`
 line-height: 30px;
-display: flex;
+display: -webkit-box;   
+display: -moz-box; 
+display: -ms-flexbox; 
+display: -webkit-flex; 
+display: flex;   
 flex-direction: column;
 text-decoration: none;
 `
@@ -19,7 +23,11 @@ color: ${({theme}) => theme.text};
 `
 
 export const NavbarContainer = styled.div`
-display: flex;
+display: -webkit-box;   
+display: -moz-box; 
+display: -ms-flexbox; 
+display: -webkit-flex; 
+display: flex;   
 justify-content: space-between;
 padding: 20px 50px;
 box-shadow: var(--shadow);
@@ -33,7 +41,11 @@ z-index: 1000;
 `
 
 export const IconContainer = styled.div`
-display: flex;
+display: -webkit-box;   
+display: -moz-box; 
+display: -ms-flexbox; 
+display: -webkit-flex; 
+display: flex;   
 align-items: center;
 `
 
