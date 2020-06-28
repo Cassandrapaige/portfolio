@@ -101,13 +101,14 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme = {theme}>
       <GlobalStyle theme = {theme}/>
+      <ClientOnly>
       <Header
         isDarkMode = {isDarkMode}
         handleClick = {() => toggleTheme()} 
         siteTitle={data.site.siteMetadata.title} />
 
         <Container>
-        <main>{children}</main>
+        <main theme = {theme}>{children}</main>
         {
           typeof window !== 'undefined' && window.location.pathname !== '/contact' &&
           <ContactButton to = '/contact'><FontAwesomeIcon icon={faEnvelope} /></ContactButton>
@@ -119,12 +120,14 @@ const Layout = ({ children }) => {
           </div>
         </Footer>
       </Container>
+      </ClientOnly>
     </ThemeProvider>
     )
   }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  theme: PropTypes.string.isRequired
 }
 
 export default Layout
